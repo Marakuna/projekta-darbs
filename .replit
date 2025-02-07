@@ -1,2 +1,4 @@
-language = "python3"
 run = "python app.py"
+
+[deployment]
+run = ["sh", "-c", "python app.py"]
