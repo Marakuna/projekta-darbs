@@ -1,57 +1,39 @@
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .tabs {
-  width: 100%;
   display: flex;
-  flex-direction: column;
-}
-
-.tabs > input[type="radio"] {
-  display: none;
-}
-
-.tabs > ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
 }
 
-.tabs > ul > li {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.tabs > ul > li > label {
-  display: block;
-  padding: 10px;
-  background: #ddd;
+.tab {
   cursor: pointer;
+  padding: 10px;
 }
 
-.tabs > ul > li > label:hover {
-  background: #ccc;
+.tab.active {
+  background-color: #ccc;
 }
 
-.tabs > input[type="radio"]:checked + ul > li > label[for="tab1"],
-.tabs > input[type="radio"]:checked + ul > li > label[for="tab2"],
-.tabs > input[type="radio"]:checked + ul > li > label[for="tab3"] {
-  background: #fff;
-  border-bottom: 2px solid #fff;
+.tab.Hover {
+  background-color: #AAA;
 }
 
-.content > section {
-  display: none;
-  padding: 20px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-#tab1:checked ~ .content > section:nth-of-type(1),
-#tab2:checked ~ .content > section:nth-of-type(2),
-#tab3:checked ~ .content > section:nth-of-type(3) {
-  display: block;
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
 }
