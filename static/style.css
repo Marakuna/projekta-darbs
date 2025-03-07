@@ -11,20 +11,25 @@ body {
   padding: 0;
   margin: 0;
   font-family: Arial, sans-serif;
+  display: flex; /* Use flexbox for layout */
 }
 
 .tabs {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column; /* Stack tabs vertically */
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid black;
+  border-right: 1px solid black; /* Border on right instead of bottom */
+  width: 150px; /* Fixed width for the sidebar */
+  height: 100vh; /* Full height */
+  background-color: #f1f1f1;
 }
 
 .tab {
   cursor: pointer;
-  padding: 10px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .tab.active {
@@ -36,7 +41,6 @@ body {
 }
 
 .tab-content {
-  margin-left: 20px;
-  margin-right: 20px;
+  flex: 1; /* Take up remaining space */
   padding: 20px;
 }
