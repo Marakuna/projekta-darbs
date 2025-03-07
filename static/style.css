@@ -19,7 +19,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid black; /* Change back to bottom border */
+  border-bottom: 2px solid black; /* Increased border thickness from 1px to 2px */
   background-color: #f1f1f1;
   width: auto; /* Auto width */
 }
@@ -27,7 +27,7 @@ body {
 .tab {
   cursor: pointer;
   padding: 10px 15px;
-  border-right: 1px solid #ddd;
+  border-right: 2px solid #ddd; /* Increased border thickness from 1px to 2px */
 }
 
 .tab.active {
