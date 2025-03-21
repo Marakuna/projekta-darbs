@@ -23,8 +23,37 @@
             <h1>Projekta darbs</h1>
             <p>Šajā mājas lapā ir apkopoti tadi par to kāds ir </p>
             <div class="container">
-                <div class="box" id="box1">1</div>
+                <canvas id="myHistogram"></canvas>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('myHistogram').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['A', 'B', 'C', 'D', 'E', 'F'],
+                        datasets: [{
+                            label: 'Histogrammas piemērs',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(249, 199, 113, 0.8)',
+                            ],
+                            borderColor: [
+                                'rgba(249, 199, 113, 1)',
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
         <div id="pricing" data-tab-content>
             <h1>Pricing</h1>
