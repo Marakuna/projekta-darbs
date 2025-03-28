@@ -12,20 +12,14 @@ def home():
 
 @app.route("/data")
 def data():
-    # Read CSV data
     df = pd.read_csv('static/data.csv')
     
-    # Create histogram
-    plt.figure(figsize=(6,4))
+    plt.figure(figsize=(5,4))
     plt.hist(df['value'], bins=5, edgecolor='black')
     plt.title('vecums')
     plt.xlabel('Vecums')
     plt.ylabel('Skaits')
-    
-    
-    
-    
-    # Save plot to base64 string
+
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
     buf.seek(0)
