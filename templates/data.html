@@ -45,6 +45,22 @@
                 {% endfor %}
             </table>
         </div>
+        
+        <div class="table-container" style="margin-left: 30px; margin-top: 30px;">
+            <h2>Cik bieži sporto?</h2>
+            <table class="w3-table w3-striped w3-bordered" style="width: 400px;">
+                <tr>
+                    {% for category, count in horizontal_data.items() %}
+                    <th>{{ category }}</th>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for category, count in horizontal_data.items() %}
+                    <td>{{ count }}</td>
+                    {% endfor %}
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>

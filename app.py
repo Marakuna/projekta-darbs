@@ -28,7 +28,10 @@ def data():
     
     df_table = pd.read_csv('static/table_data.csv')
     table_data = list(zip(df_table['Ilgums'], df_table['skaits']))
-    return render_template('data.html', plot_url=plot_url, value_counts=table_data)
+    
+    df_horizontal = pd.read_csv('static/horizontal_data.csv')
+    horizontal_data = {col: val for col, val in zip(df_horizontal.columns[1:], df_horizontal.iloc[0, 1:])}
+    return render_template('data.html', plot_url=plot_url, value_counts=table_data, horizontal_data=horizontal_data)
 
 @app.route("/about")
 def about():
