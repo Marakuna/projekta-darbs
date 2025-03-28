@@ -16,8 +16,8 @@ def data():
     df = pd.read_csv('static/data.csv')
     
     # Create histogram
-    plt.figure(figsize=(10,6))
-    plt.hist(df['value'], bins=10, edgecolor='black')
+    plt.figure(figsize=(8,4))
+    plt.hist(df['value'], bins=20, edgecolor='black')
     plt.title('Data Distribution')
     plt.xlabel('Value')
     plt.ylabel('Density')
