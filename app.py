@@ -16,12 +16,12 @@ def data():
     df = pd.read_csv('static/data.csv')
     
     # Create histogram
-    plt.figure(figsize=(8,4))
-    plt.hist(df['value'], bins=20, edgecolor='black')
-    plt.title('Data Distribution')
-    plt.xlabel('Value')
-    plt.ylabel('Density')
-    plt.grid(True, alpha=0.3)
+    plt.figure(figsize=(6,4))
+    plt.hist(df['value'], bins=5, edgecolor='black')
+    plt.title('vecums')
+    plt.xlabel('Vecums')
+    plt.ylabel('Skaits')
+    
     
     
     
