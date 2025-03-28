@@ -14,7 +14,7 @@ def home():
 def data():
     df = pd.read_csv('static/data.csv')
     
-    plt.figure(figsize=(5,4))
+    plt.figure(figsize=(5,5))
     plt.hist(df['value'], bins=5, edgecolor='black')
     plt.title('vecums')
     plt.xlabel('Vecums')
