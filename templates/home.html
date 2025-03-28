@@ -4,66 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="{{ url_for('static', filename='script.js') }}" defer></script>
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
-    <title>Tabs</title>
 </head>
-<body>
-    <div>
-        <ul class="tabs">
-            <li data-tab-target="#home" class="active tab">Sākums</li>
-            <li data-tab-target="#pricing" class="tab">Pricing</li>
-            <li data-tab-target="#about" class="tab">About</li>
-        </ul>
+    <body>
+        <div>
+      <ul class="tabs">
+          <li data-tab-target="#home" class="active tab">Sākums</li>
+          <li data-tab-target="#data" class="tab">Data</li>
+          <li data-tab-target="#about" class="tab">Par mums</li>
+      </ul>
     </div>
-    
     <div class="tab-content">
-        <div id="home" data-tab-content class="active">
-            <h1>Projekta darbs</h1>
-            <p>Šajā mājas lapā ir apkopoti tadi par to kāds ir </p>
-            <p>Kuras vecuma grupas aizpildīja anketu</p>
-            <div class="container">
-                <canvas id="myHistogram"></canvas>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-                const ctx = document.getElementById('myHistogram').getContext('2d');
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['A', 'B', 'C', 'D', 'E', 'F'],
-                        datasets: [{
-                            label: 'Vecuma grupas',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(249, 199, 113, 0.8)',
-                            ],
-                            borderColor: [
-                                'rgba(249, 199, 113, 1)',
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                });
-            </script>
-        </div>
-        <div id="pricing" data-tab-content>
-            <h1>Pricing</h1>
-            <p>This is the pricing</p>
-        </div>
-        <div id="about" data-tab-content>
-            <h1>About</h1>
-            <p>This is the about</p>
-        </div>
+      <div id="home" data-tab-content class="active">
+          <h1>Projekta darbs</h1>
+          <h4>Šajā mājas lapā ir apkopoti tadi par to kāds ir civēku miega grafiks.</h4>
+          <h5>Sākuma sadaļa ir maza informācija par to kas ir apkopots datu sadaļā</h5>
+          <p>Kuras vecuma grupas aizpildīja anketu</p>
+          
+      <div id="data" data-tab-content>
+          <h1>Iegūtie dati</h1>
+          <p></p>
+      </div>
+      <div id="about" data-tab-content>
+          <h1>About</h1>
+      </div>
     </div>
-</body>
+    </body>
 </html>
