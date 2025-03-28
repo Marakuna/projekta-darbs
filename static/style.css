@@ -60,3 +60,17 @@ body {
 p.big {
   line-height: 1;
 }
+
+.histogram-container {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.histogram-container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
