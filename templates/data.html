@@ -29,7 +29,22 @@
             <h2>Data Histogram</h2>
             <img src="data:image/png;base64,{{ plot_url }}" alt="Histogram">
         </div>
-      <h3>Histogrammā ir redzams kadā vecuma grupā cilvēki ir aizpildījuši mūsu anketu.</h3>
+        <div class="table-container">
+            <h2>Data Table</h2>
+            <table class="w3-table w3-striped w3-bordered">
+                <tr>
+                    <th>Value</th>
+                    <th>Count</th>
+                </tr>
+                {% for value, count in value_counts %}
+                <tr>
+                    <td>{{ value }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <h3>Histogrammā ir redzams kadā vecuma grupā cilvēki ir aizpildījuši mūsu anketu.</h3>
     </div>
 </body>
 </html>

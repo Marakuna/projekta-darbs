@@ -26,7 +26,8 @@ def data():
     plot_url = base64.b64encode(buf.getvalue()).decode('utf8')
     plt.close()
     
-    return render_template('data.html', plot_url=plot_url)
+    value_counts = df['value'].value_counts().sort_index().items()
+    return render_template('data.html', plot_url=plot_url, value_counts=value_counts)
 
 @app.route("/about")
 def about():
