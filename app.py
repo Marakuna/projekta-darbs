@@ -17,13 +17,13 @@ def data():
     
     # Create histogram
     plt.figure(figsize=(10,6))
-    plt.hist(df['value'], bins=20, density=True, color='lightblue', edgecolor='black')
+    plt.hist(df['value'], bins=10, edgecolor='black')
     plt.title('Data Distribution')
     plt.xlabel('Value')
     plt.ylabel('Density')
     plt.grid(True, alpha=0.3)
-    plt.xlim(-2, 12)
-    plt.ylim(0, 0.25)
+    
+    
     
     # Save plot to base64 string
     buf = io.BytesIO()
