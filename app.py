@@ -26,8 +26,9 @@ def data():
     plot_url = base64.b64encode(buf.getvalue()).decode('utf8')
     plt.close()
     
-    value_counts = df['value'].value_counts().sort_index().items()
-    return render_template('data.html', plot_url=plot_url, value_counts=value_counts)
+    df_table = pd.read_csv('static/table_data.csv')
+    table_data = list(zip(df_table['Ilgums'], df_table['skaits']))
+    return render_template('data.html', plot_url=plot_url, value_counts=table_data)
 
 @app.route("/about")
 def about():
