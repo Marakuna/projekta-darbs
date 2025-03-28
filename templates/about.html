@@ -1,24 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>About</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
-    </style>
-    <body>
-          <div>
-              <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/data">Data</a></li>
-                  <li><a href="/about">About</a></li>
-              </ul>
-            </div>
-        <p>kokok</p>
-      </ul>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+        <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="/data" class="w3-bar-item w3-button">Data</a>
+        <a href="/about" class="w3-bar-item w3-button">About</a>
     </div>
-    </body>
+
+    <div class="w3-teal">
+        <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+        <div class="w3-container">
+            <h1>About</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p>kokok</p>
+    </div>
+</body>
 </html>
